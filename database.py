@@ -66,7 +66,7 @@ def inserir_alunos(cnn: Connection):
     input_data = st.date_input(label='Data de Nascimento')                    
     if st.button("Save to database"):
         params = (input_name, input_cpf, input_data)
-        cnn.execute("INSERT INTO alunos (nome, cpf, data_nasc) VALUES (?, ?, ?)", params)
+        cnn.execute("INSERT OR IGNORE INTO alunos (nome, cpf, data_nasc) VALUES (?, ?, ?)", params)
         cnn.commit()
         st.success("Aluno Adicionado com Sucesso")
     
