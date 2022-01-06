@@ -8,3 +8,5 @@
 * Excluir aluno
 * Alterar as informações do aluno
 * Consultar os dados 
+
+### Link do App: https://share.streamlit.io/gustavo-duarte-silva/crud_sqlite3/main/main.py
